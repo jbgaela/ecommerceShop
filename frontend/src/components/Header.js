@@ -5,10 +5,13 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import {logout} from '../actions/userActions'
 
 const Header = () => {
-  const dispatch = useDispatch()
+  // const userDetails = useSelector((state) => state.userDetails)
+  // const {  user } = userDetails
   
   const userLogin = useSelector(state => state.userLogin)
-  const {userInfo} = userLogin
+  const { userInfo } = userLogin
+
+  const dispatch = useDispatch()
 
   const logoutHandler = () => {
     dispatch(logout())
@@ -41,7 +44,6 @@ const Header = () => {
                 <i className="fas fa-user"></i> Sign In
               </Nav.Link>
             </LinkContainer>}
-              
             </Nav>
           </Navbar.Collapse>
         </Container>

@@ -42,7 +42,6 @@ const ProfileScreen = ({ location, history }) => {
             setMessage('Passwords do not match!')
         } else {
             dispatch(updateUserProfile({ id: user._id, name, email, password }))
-            
         }
     }
 

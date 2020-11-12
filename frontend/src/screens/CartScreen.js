@@ -27,7 +27,7 @@ const CartScreen = ({ match, location, history }) => {
     }
 
     const checkoutHandler = () => {
-        console.log('object');
+        history.push('/shipping')
     }
 
     return (
